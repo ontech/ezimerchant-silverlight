@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ExampleSilverlightClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+  <Canvas x:Name="LayoutRoot" Width="600" Height="600">
+        <Button x:Name="MyButton" Canvas.Left="10" Canvas.Top="10"  Content="Add To Cart" Width="100" Height="50" Click="MyButton_Click"></Button>
+      
+        
+      
+      
+        <Button x:Name="MyButton2" Canvas.Left="300" Canvas.Top="300" Content="Get Cart" Width="100" Height="50" Click="MyButton2_Click"></Button>  
+    </Canvas>
+    
+    
+</UserControl>
