@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -42,7 +43,25 @@ namespace ezimerchant.Server
                 string formdata = "";
                 foreach (string k in keys)
                 {
-                    formdata += UpperCaseUrlEncode(k.ToUpperInvariant()) + "=" + UpperCaseUrlEncode((string)m_FormFields.FindByText(k).Value) + "&";
+					var Key = k.ToUpperInvariant();
+					
+					if(Key == "PRODUCTCODE" ||
+						Key == "PRODUCTNAME" ||
+						Key == "PRODUCTPRICE" ||
+						Key.StartsWith("PRODUCTPRICE(") ||
+						Key == "PRODUCTLISTPRICE" ||
+						Key == "PRODUCTWEIGHT" ||
+						Key == "PRODUCTWIDTH" ||
+						Key == "PRODUCTHEIGHT" ||
+						Key == "PRODUCTLENGTH" ||
+						Key == "PRODUCTTAX" ||
+						Key == "PRODUCTIMAGEURL" ||
+						Key.StartsWith("OPTIONTYPE(") ||
+						Key.StartsWith("OPTIONNAME(") ||
+						Key.StartsWith("OPTIONVALUES("))
+					{
+						formdata += UpperCaseUrlEncode(Key) + "=" + UpperCaseUrlEncode((string)m_FormFields.FindByText(k).Value) + "&";
+					}
                 }
 
                 if(formdata.Length > 0)
