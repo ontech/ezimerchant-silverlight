@@ -19,10 +19,10 @@ You can grab us at support@ezimerchant.com please also see [http://www.ezimercha
 Example Explained
 =================
 
-ExampleRetailSite - is a demonstration ASP.NET application that makes use of the SecureFormSigner and ExampleSilverlightClient
-ExampleSilverlightClient - makes use of the ShoppingCart silverlight class library to implement a shopping cart experience in silverlight
-SecureFormSigner - an ASP.NET server control that implements form signing to avoid end users tampering with product information during transit through a browser to the secure cart/checkout
-ShoppingCart - a silverlight class library that implements an integration with the ezimerchant secure cart and checkout environment
+* ExampleRetailSite - is a demonstration ASP.NET application that makes use of the SecureFormSigner and ExampleSilverlightClient
+* ExampleSilverlightClient - makes use of the ShoppingCart silverlight class library to implement a shopping cart experience in silverlight
+* SecureFormSigner - an ASP.NET server control that implements form signing to avoid end users tampering with product information during transit through a browser to the secure cart/checkout
+* ShoppingCart - a silverlight class library that implements an integration with the ezimerchant secure cart and checkout environment
 
 Walkthrough
 ===========
