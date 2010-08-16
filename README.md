@@ -46,7 +46,7 @@ You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME a
 * PRODUCTHEIGHT
 * PRODUCTLENGTH
 * PRODUCTTAX
-* PRODUCTIMAGEURL
+* PRODUCTIMAGEURL - a reference to an image - the full absolute URL (ezimerchant will upload this image to it's servers automatically and make it available through our resizing techniques in the templates)
 * OPTIONNAME(n) - the name of option n
 * OPTIONTYPE(n) - the type of option n (select, textarea, text, checkbox, file)
 * OPTIONVALUE(n) - the current value for option n
