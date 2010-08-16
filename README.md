@@ -46,10 +46,10 @@ You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME a
 * PRODUCTLENGTH
 * PRODUCTTAX
 * PRODUCTIMAGEURL
-* OPTIONNAME(n)
-* OPTIONTYPE(n)
-* OPTIONVALUE(n)
-* OPTIONVALUES(n)(x)
+* OPTIONNAME(n) - the name of option n
+* OPTIONTYPE(n) - the type of option n (select, textarea, text, checkbox, file)
+* OPTIONVALUE(n) - the current value for option n
+* OPTIONVALUES(n)(x) - this represents the "x'th" possible drop down values for a select option numbered n
 * QUANTITY
 
 TODO:
