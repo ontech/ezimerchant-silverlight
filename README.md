@@ -31,7 +31,8 @@ After setting up and running the ExampleRetailSite when you request ExampleSilve
 
 When you click Add To Cart the ExampleSilverlightClient will interact with the silverlight ShoppingCart class library. The class library makes a request to /GetSignedForm.aspx with a 
 query string that represents the product to be added to the cart. The /GetSignedForm.aspx file interacts with the SecureFormSigner to generate a signed form string. This signed form string is
-sent back to the silverlight client which then forwards it to the secure shopping domain.
+sent back to the silverlight client which then forwards it to the secure shopping domain. During this forwarding process, a cookie is set on the user's browser that associates future interactions
+with the cart (view or further add or edits).
 
 You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME and PRODUCTPRICE. The available form fields that the cart can use are:
 
@@ -55,7 +56,8 @@ You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME a
 TODO:
 =====
 
-Customer login and order history available through the ShoppingCart class library so this functionality can be consumed by silverlight clients
+* edit cartline
+* Customer login and order history available through the ShoppingCart class library so this functionality can be consumed by silverlight clients
 
 
 
