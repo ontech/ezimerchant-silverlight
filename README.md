@@ -9,6 +9,8 @@ Requirements
 A silverlight control to host the shopping cart
 An ezimerchant account
 
+copy and edit the clientaccesspolicy.xml and crossdomain.xml files and place them in the template directory inside the corresponding ezimerchant account
+
 Having Issues?
 ==============
 

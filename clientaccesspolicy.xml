@@ -1,0 +1,13 @@
+<access-policy>
+	<cross-domain-access>
+		<policy>
+			<allow-from>
+				<domain uri="http://*"/>
+				<domain uri="https://*"/>
+			</allow-from>
+			<grant-to>
+				<resource include-subpaths="true" path="/"/>
+			</grant-to>
+		</policy>
+	</cross-domain-access>
+</access-policy>
