@@ -33,10 +33,10 @@ sent back to the silverlight client which then forwards it to the secure shoppin
 
 You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME and PRODUCTPRICE. The available form fields that the cart can use are:
 
-* PRODUCTCODE
+* PRODUCTCODE 
 * PRODUCTNAME
 * PRODUCTPRICE
-* PRODUCTPRICE(CUR)
+* PRODUCTPRICE(CUR) - per currency pricing - CUR is the three letter ISO currency code http://en.wikipedia.org/wiki/ISO_4217
 * PRODUCTLISTPRICE
 * PRODUCTWEIGHT
 * PRODUCTWIDTH
