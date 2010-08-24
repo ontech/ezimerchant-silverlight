@@ -73,7 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ServerControl1\ServerControl1\SecureFormSigner.csproj">
+    <ProjectReference Include="..\SecureFormSigner\SecureFormSigner.csproj">
       <Project>{A4E8920E-5653-4205-AC49-D56332ACC5E8}</Project>
       <Name>SecureFormSigner</Name>
     </ProjectReference>

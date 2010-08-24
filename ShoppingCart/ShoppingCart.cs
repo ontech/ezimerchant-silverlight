@@ -75,6 +75,25 @@ namespace ezimerchant.Client
             return m_CartData;
         }
 
+        public IAsyncResult BeginEditCartLine(AsyncCallback callback, object state, int CartLineID, int Quantity)
+        {
+            if (m_AsyncResult != null)
+                throw new InvalidOperationException();
+
+            m_Dispatcher = Application.Current.RootVisual.Dispatcher;
+            m_Callback = callback;
+            m_CallbackState = state;
+
+            m_SignedFormData = "ACTION=UpdateCart&CARTLINE=" + CartLineID.ToString() + "&QUANTITY=" + Quantity.ToString();
+
+            var request = (HttpWebRequest)WebRequest.Create("https://" + SecureDomain + "/cart/?nocontent");
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            m_AsyncResult = request.BeginGetRequestStream(RequestReady, request); 
+
+            return m_AsyncResult;
+        }
+
         private void FormReady(IAsyncResult asyncResult)
         {
             HttpWebRequest request = asyncResult.AsyncState as HttpWebRequest;
