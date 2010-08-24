@@ -94,7 +94,7 @@ namespace ezimerchant.Client
             return m_AsyncResult;
         }
 
-        public void EndEditCartLine(IAsyncResult asyncResult0
+        public void EndEditCartLine(IAsyncResult asyncResult)
         {
             if(m_AsyncResult != null)
                 m_AsyncResult.AsyncWaitHandle.WaitOne();
