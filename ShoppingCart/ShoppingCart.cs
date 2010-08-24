@@ -55,7 +55,7 @@ namespace ezimerchant.Client
             if (m_AsyncResult != null)
                 throw new InvalidOperationException();
 
-            m_Dispatcher = Application.Current.RootVisual.Dispatcher;
+            m_Dispatcher = Application.Current.RootVisual.Dispatcher; 
             m_Callback = callback;
             m_CallbackState = state;
 
