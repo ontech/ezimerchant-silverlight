@@ -49,6 +49,7 @@ namespace ezimerchant.Server
 						Key == "PRODUCTNAME" ||
 						Key == "PRODUCTPRICE" ||
 						Key.StartsWith("PRODUCTPRICE(") ||
+						Key.StartsWith("PRODUCTAVAILABLE(") ||
 						Key == "PRODUCTLISTPRICE" ||
 						Key == "PRODUCTWEIGHT" ||
 						Key == "PRODUCTWIDTH" ||
