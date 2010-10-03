@@ -47,6 +47,7 @@ You will notice the GetSignedForm.aspx file only uses PRODUCTCODE, PRODUCTNAME a
 * PRODUCTLENGTH
 * PRODUCTTAX
 * PRODUCTIMAGEURL - a reference to an image - the full absolute URL (ezimerchant will upload this image to it's servers automatically and make it available through our resizing techniques in the templates)
+* PRODUCTAVAILABLE(COUNTRYCODE) - per country availability - COUNTRYCODE is 2 letter ISO Country Code http://en.wikipedia.org/wiki/ISO_3166-1
 * OPTIONNAME(n) - the name of option n
 * OPTIONTYPE(n) - the type of option n (select, textarea, text, checkbox, file)
 * OPTIONVALUE(n) - the current value for option n

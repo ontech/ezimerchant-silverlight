@@ -22,6 +22,31 @@ namespace ezimerchant.Client
 
         public string SecureDomain;
         public string FormSignWebService;
+		
+		public IAsyncResult BeginUpdateCart(Dictionary<string, string> Parameters, AsyncCallback callback, object state)
+		{
+            if (m_AsyncResult != null)
+                throw new InvalidOperationException();
+			
+            m_Dispatcher = Application.Current.RootVisual.Dispatcher;
+            m_Callback = callback;
+            m_CallbackState = state;
+
+			m_SignedFormData = "ACTION=UpdateCart&" + ToQueryString(Parameters);
+			
+            var request = (HttpWebRequest)WebRequest.Create("https://" + SecureDomain + "/cart/?nocontent");
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            m_AsyncResult = request.BeginGetRequestStream(RequestReady, request); 			
+			
+			return m_AsyncResult;
+		}
+		
+        public void EndUpdateCart(IAsyncResult asyncResult)
+        {
+            if(m_AsyncResult != null)
+                m_AsyncResult.AsyncWaitHandle.WaitOne();
+        }		
 
         public IAsyncResult BeginAddToCart(Dictionary<string, string> QueryParameters, AsyncCallback callback, object state)
         {
